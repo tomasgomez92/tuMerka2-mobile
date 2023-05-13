@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompradorService } from './servicios/comprador/comprador.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,5 +15,5 @@ export class AppComponent {
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(private compradorService: CompradorService) {}
 }
